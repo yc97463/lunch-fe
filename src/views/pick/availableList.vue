@@ -1,9 +1,11 @@
 <template>
   <div class="container my-7">
     <div class="text-center">
-      <h1>{{orderId}} 揪餐囉</h1>
+      <h1>取餐列表</h1>
       <p>
-        發起人：YC
+        <v-chip>
+          班級：307
+        </v-chip>
       </p>
     </div>
     <div class="container">
@@ -15,23 +17,28 @@
               width="450px"
           >
             <v-card-title>
-              product_name
+              御饌坊
             </v-card-title>
-            <v-card-text>
-              <v-img
-                  :src="`https://s3.ap-northeast-1.amazonaws.com/assets-cip.deershark.com/order/SCR-20220220-es.jpeg`"
-                  :lazy-src="``"
-                  aspect-ratio="1"
-                  class="grey lighten-2"
-              ></v-img>
+            <v-card-text class="text-center align-center">
+              <v-btn
+                  elevation="0"
+                  fab
+                  x-large
+                  color="white"
+                  style="font-size: 88px;"
+                  class="my-15"
+              >
+                14份
+              </v-btn>
             </v-card-text>
             <v-card-actions>
               <v-btn
-                color="primary"
-                property="2"
-                block
+                  color="primary"
+                  property="2"
+                  block
+                  to="/pick/御饌坊"
               >
-                我要這個
+                我要領這個
               </v-btn>
             </v-card-actions>
           </v-card>
@@ -44,12 +51,6 @@
 
 <script>
 export default {
-  name: "orderView",
-  computed: {
-    orderId() {
-      return this.$route.params.orderId
-    }
-  }
 }
 </script>
 

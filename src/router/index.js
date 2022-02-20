@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import broadcastView from '../views/broadcast/view.vue'
-import checkin from "@/views/self-study/checkin/checkin.vue";
 
 Vue.use(VueRouter)
 
@@ -32,38 +30,19 @@ const routes = [
     name: 'Login',
     component:  () => import('../views/account/login')
   },
-    // broadcast router
+    // order lunch
   {
-    path: '/broadcast',
-    name: 'Broadcast',
-    component: () => import('../views/broadcast/index')
+    path: '/order',
+    component: () => import('../views/order/productList')
+  },
+    // pickup order
+  {
+    path: '/pick',
+    component: () => import('../views/pick/availableList')
   },
   {
-    path: '/broadcast/:broadcastId',
-    component: broadcastView
-  },
-    // self-study router
-  {
-    path: '/self-study',
-    name: 'Self-Study',
-    component: () => import('../views/self-study/index')
-  },
-  {
-    path: '/self-study/apply',
-    component: () => import('../views/self-study/apply')
-  },
-  {
-    path: '/self-study/checkin',
-    component: () => import('../views/self-study/checkin/index')
-  },
-  {
-    path: '/self-study/checkin/:roomId',
-    component: checkin
-  },
-    // order router
-  {
-    path:'/order/:orderId',
-    component: () => import('../views/order/view')
+    path: '/pick/:orderId',
+    component: () => import('../views/pick/pickOrder')
   },
     // 404
   {

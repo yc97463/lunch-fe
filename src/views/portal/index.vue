@@ -1,0 +1,42 @@
+<template>
+  <div class="container">
+    <v-card
+        class="mx-auto my-7"
+        color="light"
+        width="700px"
+    >
+      <v-card-title>
+        早ㄢㄢ
+      </v-card-title>
+      <v-card-text>
+        Centered
+      </v-card-text>
+      <v-card-actions>
+        <v-btn
+          type="success"
+          to="/account/login"
+        >
+          登入
+        </v-btn>
+        <v-btn
+            type="success"
+            to="/order"
+        >
+          訂餐
+        </v-btn>
+        <v-btn
+            type="success"
+            to="/pick"
+        >
+          取餐
+        </v-btn>
+        <v-btn
+            type="success"
+            to="/123456789"
+        >
+          404 page
+        </v-btn>
+      </v-card-actions>
+    </v-card>
+  </div>
+</template>

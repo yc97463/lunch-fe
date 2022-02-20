@@ -1,12 +1,15 @@
 <template>
-  <order-view />
+  <news-view />
 </template>
 
 <script>
-import OrderView from "@/components/order/orderView";
+import newsView from "@/components/broadcast/newsView";
+
 export default {
   name: "broadcastView",
-  components: {OrderView},
+  components: {
+    newsView,
+  }
 }
 </script>
 
